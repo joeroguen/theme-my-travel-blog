@@ -1,0 +1,21 @@
+/**
+ * My Travel Blog styles for admin dashboard pages
+ *
+ *
+ * @package mytravelblog
+ * @since 1.0
+ */
+
+#form-subpage-sidebar {
+    float: left;
+    width: 50%;
+}
+#sidebar-img-preview {
+    height: 600px;
+    margin-left: 6%;
+    width: auto;
+}
+#profile_photo_preview {
+    height: 100px;
+    width: auto;
+}
