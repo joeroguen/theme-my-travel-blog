@@ -113,18 +113,25 @@ if ( ! function_exists( 'mtb_add_admin_submenu_frontpage_sidebar' ) ) {
         register_setting( 'settings_group_main', 'fav_food_post_url' );
         add_settings_field( 'field_fav_food', 'food', 'mtb_add_field_fav_food', 'mtb_subpage_sidebar', 'section_favs' );
         register_setting( 'settings_group_main', 'fav_hotel' );
+        register_setting( 'settings_group_main', 'fav_hotel_post_url' );
         add_settings_field( 'field_fav_hotel', 'hotel', 'mtb_add_field_fav_hotel', 'mtb_subpage_sidebar', 'section_favs' );
         register_setting( 'settings_group_main', 'fav_resort' );
+        register_setting( 'settings_group_main', 'fav_resort_post_url' );
         add_settings_field( 'field_fav_resort', 'resort', 'mtb_add_field_fav_resort', 'mtb_subpage_sidebar', 'section_favs' );
         register_setting( 'settings_group_main', 'fav_night_life' );
+        register_setting( 'settings_group_main', 'fav_night_life_post_url' );
         add_settings_field( 'field_fav_night_life', 'night life', 'mtb_add_field_fav_night_life', 'mtb_subpage_sidebar', 'section_favs' );
         register_setting( 'settings_group_main', 'fav_people' );
+        register_setting( 'settings_group_main', 'fav_people_post_url' );
         add_settings_field( 'field_fav_people', 'people', 'mtb_add_field_people', 'mtb_subpage_sidebar', 'section_favs' );
         register_setting( 'settings_group_main', 'fav_shopping' );
+        register_setting( 'settings_group_main', 'fav_shopping_post_url' );
         add_settings_field( 'field_fav_shopping', 'shopping', 'mtb_add_field_shopping', 'mtb_subpage_sidebar', 'section_favs' );
         register_setting( 'settings_group_main', 'fav_weather' );
+        register_setting( 'settings_group_main', 'fav_weather_post_url' );
         add_settings_field( 'field_fav_weather', 'weather', 'mtb_add_field_weather', 'mtb_subpage_sidebar', 'section_favs' );
         register_setting( 'settings_group_main', 'fav_sight_seeing' );
+        register_setting( 'settings_group_main', 'fav_sight_seeing_post_url' );
         add_settings_field( 'field_fav_sight_seeing', 'sight_seeing', 'mtb_add_field_sight_seeing', 'mtb_subpage_sidebar', 'section_favs' );
     }
     //section main
@@ -135,19 +142,19 @@ if ( ! function_exists( 'mtb_add_admin_submenu_frontpage_sidebar' ) ) {
     }
     function mtb_add_field_greeting_message() {
         $greeting_message = esc_attr( get_option( 'greeting_message' ) );
-        echo '<input type="text" name="greeting_message" value="' . $greeting_message . '" placeholder="hi!" />';
+        echo '<input type="text" name="greeting_message" value="' . $greeting_message . '" /><p class="description">Example = hi!</p>';
     }
     function mtb_add_field_short_intro() {
         $short_intro = esc_attr( get_option( 'short_intro' ) );
-        echo '<input type="text" name="short_intro" value="'.$short_intro.'" placeholder="my name is Lara. follow me on my travels." />';
+        echo '<input type="text" name="short_intro" value="'.$short_intro.'" /><p class="description">Example = my name is Lara. follow me on my travels.</p>';
     }
     function mtb_add_field_total_countries_visited() {
         $total_countries_visited = esc_attr( get_option( 'total_countries_visited' ) );
-        echo '<input type="text" name="total_countries_visited" value="' . $total_countries_visited . '" placeholder="23" />';
+        echo '<input type="text" name="total_countries_visited" value="' . $total_countries_visited . '" />';
     }
     function mtb_add_field_total_miles_traveled() {
         $total_miles_traveled = esc_attr( get_option( 'total_miles_traveled' ) );
-        echo '<input type="text" name="total_miles_traveled" value="' . $total_miles_traveled . '" placeholder="18,203" />';
+        echo '<input type="text" name="total_miles_traveled" value="' . $total_miles_traveled . '" />';
     }
     //section favs
     function mtb_add_section_favs() {
@@ -160,30 +167,37 @@ if ( ! function_exists( 'mtb_add_admin_submenu_frontpage_sidebar' ) ) {
     }
     function mtb_add_field_fav_hotel() {
         $fav_hotel = esc_attr( get_option( 'fav_hotel' ) );
-        echo '<label for="fav_hotel">Title</label> <input type="text" name="fav_hotel" value="' . $fav_hotel . '" /><br /><label for="fav_hotel_post_url">Post Url</label> <input type="text" name="fav_hotel_post_url" />';
+        $fav_hotel_post_url = esc_attr( get_option( 'fav_hotel_post_url' ) );
+        echo '<label for="fav_hotel">Title</label> <input type="text" name="fav_hotel" value="' . $fav_hotel . '" /><br /><label for="fav_hotel_post_url">Post Url</label> <input type="text" name="fav_hotel_post_url" value="' . $fav_hotel_post_url . '" />';
     }
     function mtb_add_field_fav_resort() {
         $fav_resort = esc_attr( get_option( 'fav_resort' ) );
-        echo '<label for="fav_resort">Title</label> <input type="text" name="fav_resort" value="' . $fav_resort . '" /><br /><label for="fav_resort_post_url">Post Url</label> <input type="text" name="fav_resort_post_url" />';
+        $fav_resort_post_url = esc_attr( get_option( 'fav_resort_post_url' ) );
+        echo '<label for="fav_resort">Title</label> <input type="text" name="fav_resort" value="' . $fav_resort . '" /><br /><label for="fav_resort_post_url">Post Url</label> <input type="text" name="fav_resort_post_url" value="' . $fav_resort_post_url . '" />';
     }
     function mtb_add_field_fav_night_life() {
         $fav_night_life = esc_attr( get_option( 'fav_night_life' ) );
-        echo '<label for="fav_night_life">Title</label> <input type="text" name="fav_night_life" value="' . $fav_night_life . '" /><br /><label for="fav_night_life_post_url">Post Url</label> <input type="text" name="fav_night_life_post_url" />';
+        $fav_night_life_post_url = esc_attr( get_option( 'fav_night_life_post_url' ) );
+        echo '<label for="fav_night_life">Title</label> <input type="text" name="fav_night_life" value="' . $fav_night_life . '" /><br /><label for="fav_night_life_post_url">Post Url</label> <input type="text" name="fav_night_life_post_url" value="' . $fav_night_life_post_url . '" />';
     }
     function mtb_add_field_people() {
         $fav_people = esc_attr( get_option( 'fav_people' ) );
-        echo '<label for="fav_people">Title</label> <input type="text" name="fav_people" value="' . $fav_people . '" /><br /><label for="fav_people_post_url">Post Url</label> <input type="text" name="fav_people_post_url" />';
+        $fav_people_post_url = esc_attr( get_option( 'fav_people_post_url' ) );
+        echo '<label for="fav_people">Title</label> <input type="text" name="fav_people" value="' . $fav_people . '" /><br /><label for="fav_people_post_url">Post Url</label> <input type="text" name="fav_people_post_url" value="' . $fav_people_post_url . '" />';
     }
     function mtb_add_field_shopping() {
         $fav_shopping = esc_attr( get_option( 'fav_shopping' ) );
-        echo '<label for="fav_shopping">Title</label> <input type="text" name="fav_shopping" value="' . $fav_shopping . '" /><br /><label for="fav_shopping_post_url">Post Url</label> <input type="text" name="fav_shopping_post_url" />';
+        $fav_shopping_post_url = esc_attr( get_option( 'fav_shopping_post_url' ) );
+        echo '<label for="fav_shopping">Title</label> <input type="text" name="fav_shopping" value="' . $fav_shopping . '" /><br /><label for="fav_shopping_post_url">Post Url</label> <input type="text" name="fav_shopping_post_url" value="' . $fav_shopping_post_url . '" />';
     }
     function mtb_add_field_weather() {
         $fav_weather = esc_attr( get_option( 'fav_weather' ) );
-        echo '<label for="fav_weather">Title</label> <input type="text" name="fav_weather" value="' . $fav_weather . '" /><br /><label for="fav_weather_post_url">Post Url</label> <input type="text" name="fav_weather_post_url" />';
+        $fav_weather_post_url = esc_attr( get_option( 'fav_weather_post_url' ) );
+        echo '<label for="fav_weather">Title</label> <input type="text" name="fav_weather" value="' . $fav_weather . '" /><br /><label for="fav_weather_post_url">Post Url</label> <input type="text" name="fav_weather_post_url" value="' . $fav_weather_post_url . '" />';
     }
     function mtb_add_field_sight_seeing() {
         $fav_sight_seeing = esc_attr( get_option( 'fav_sight_seeing' ) );
-        echo '<label for="fav_sight_seeing">Title</label> <input type="text" name="fav_sight_seeing" value="' . $fav_sight_seeing . '" /><br /><label for="fav_sight_seeing_post_url">Post Url</label> <input type="text" name="fav_sight_seeing_post_url" />';
+        $fav_sight_seeing_post_url = esc_attr( get_option( 'fav_sight_seeing_post_url' ) );
+        echo '<label for="fav_sight_seeing">Title</label> <input type="text" name="fav_sight_seeing" value="' . $fav_sight_seeing . '" /><br /><label for="fav_sight_seeing_post_url">Post Url</label> <input type="text" name="fav_sight_seeing_post_url" value="' . $fav_sight_seeing_post_url . '" />';
     }
 }

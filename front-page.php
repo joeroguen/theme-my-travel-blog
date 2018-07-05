@@ -22,7 +22,9 @@
                 </div>
             </div>
         <?php endwhile; ?>
-        <a class='button-view-more-blogs offset-sm-2' href='#'>view more blogs</a>
+        <div class='button-view-more-blogs offset-sm-2'>
+            <?php posts_nav_link(); ?>
+        </div>
     </div>
 <?php endif; ?>
     <!-- sectionsidebar -->
@@ -45,14 +47,41 @@
             </div>
             <h3>favs</h3>
             <ul class='list'>
-                <li>food<a href='<?php echo get_option( 'fav_food_post_url' ); ?>'><?php echo get_option( 'fav_food' ); ?></a></li>
-                <li>hotel<a href='#'><?php echo get_option( 'fav_hotel' ); ?></a></li>
-                <li>resort<a href='#'><?php echo get_option( 'fav_resort' ); ?></a></li>
-                <li>night life<a href='#'><?php echo get_option( 'fav_night_life' ); ?></a></li>
-                <li>people<a href='#'><?php echo get_option( 'fav_people' ); ?></a></li>
-                <li>shopping<a href='#'><?php echo get_option( 'fav_shopping' ); ?></a></li>
-                <li>weather<a href='#'><?php echo get_option( 'fav_weather' ); ?></a></li>
-                <li>seeing<a href='#'><?php echo get_option( 'fav_sight_seeing' ); ?></a></li>
+                <?php
+                //get_option variables for favs list
+                $fav_food_val = get_option( 'fav_food_post_url' );
+                $fav_hotel_val = get_option( 'fav_hotel_post_url' );
+                $fav_resort_val = get_option( 'fav_resort_post_url' );
+                $fav_night_life_val = get_option( 'fav_night_life_post_url' );
+                $fav_people_val = get_option( 'fav_people_post_url' );
+                $fav_shopping_val = get_option( 'fav_shopping_post_url' );
+                $fav_weather_val = get_option( 'fav_weather_post_url' );
+                $fav_sight_seeing_val = get_option( 'fav_sight_seeing_post_url' );
+                ?>
+                <?php if ( ! empty( $fav_food_val ) ) : ?>
+                    <li>food<a href='<?php echo get_option( 'fav_food_post_url' ); ?>'><?php echo get_option( 'fav_food' ); ?></a></li>
+                <?php endif; ?>
+                <?php if ( ! empty( $fav_hotel_val ) ) : ?>
+                    <li>hotel<a href='<?php echo get_option( 'fav_hotel_post_url' ); ?>'><?php echo get_option( 'fav_hotel' ); ?></a></li>
+                <?php endif; ?>
+                <?php if ( ! empty( $fav_resort_val ) ) : ?>
+                    <li>resort<a href='<?php echo get_option( 'fav_resort_post_url' ); ?>'><?php echo get_option( 'fav_resort' ); ?></a></li>
+                <?php endif; ?>
+                <?php if ( ! empty( $fav_night_life_val ) ) : ?>
+                    <li>night life<a href='<?php echo get_option( 'fav_night_life_post_url' ); ?>'><?php echo get_option( 'fav_night_life' ); ?></a></li>
+                <?php endif; ?>
+                <?php if ( ! empty( $fav_people_val ) ) : ?>
+                    <li>people<a href='<?php echo get_option( 'fav_people_post_url' ); ?>'><?php echo get_option( 'fav_people' ); ?></a></li>
+                <?php endif; ?>
+                <?php if ( ! empty( $fav_shopping_val ) ) : ?>
+                    <li>shopping<a href='<?php echo get_option( 'fav_shopping_post_url' ); ?>'><?php echo get_option( 'fav_shopping' ); ?></a></li>
+                <?php endif; ?>
+                <?php if ( ! empty( $fav_weather_val ) ) : ?>
+                    <li>weather<a href='<?php echo get_option( 'fav_weather_post_url' ); ?>'><?php echo get_option( 'fav_weather' ); ?></a></li>
+                <?php endif; ?>
+                <?php if ( ! empty( $fav_sight_seeing_val ) ) : ?>
+                    <li>sight seeing<a href='<?php echo get_option( 'fav_sight_seeing_post_url' ); ?>'><?php echo get_option( 'fav_sight_seeing' ); ?></a></li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>

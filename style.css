@@ -212,7 +212,7 @@ h2 {
 .section-main .post:last-child {
   margin-bottom: 0; }
 
-.button-view-more-blogs {
+.button-view-more-blogs a {
   border: 1px solid #148bb1;
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
