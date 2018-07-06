@@ -79,7 +79,7 @@ if ( ! function_exists( 'mtb_add_admin_submenu_frontpage_sidebar' ) ) {
     //make submenu page layout
     function mtb_add_sidebar_options() {
         echo '<h1>Sidebar Settings</h1>';
-        echo 'Settings for sidebar section on front page of website';
+        echo 'Settings for sidebar section';
         echo '<hr />';
         settings_errors();
         echo '<form id="form-subpage-sidebar" action="options.php" method="post">';
@@ -146,7 +146,7 @@ if ( ! function_exists( 'mtb_add_admin_submenu_frontpage_sidebar' ) ) {
     }
     function mtb_add_field_short_intro() {
         $short_intro = esc_attr( get_option( 'short_intro' ) );
-        echo '<input type="text" name="short_intro" value="'.$short_intro.'" /><p class="description">Example = my name is Lara. follow me on my travels.</p>';
+        echo '<input type="text" name="short_intro" value="'.$short_intro.'" /><p class="description">Example = my name is ____. follow me on my travels.</p>';
     }
     function mtb_add_field_total_countries_visited() {
         $total_countries_visited = esc_attr( get_option( 'total_countries_visited' ) );
