@@ -28,6 +28,7 @@
     <div class='banner' style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/nolan-marketti-93667-unsplash.jpg)'>
         <h1><?php bloginfo( 'name' ); ?></h1>
     </div>
+<?php elseif ( is_search() ) : ?>
 <?php elseif ( is_single() ) : ?>
 <?php elseif ( is_page_template() ) : ?>
     <?php if ( have_posts() ) : ?>
@@ -73,32 +74,7 @@
                     )
                 );
             ?>
-            <!--
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">about</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">resources</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#footer">follow</a>
-              </li>
-            </ul>
-            -->
-            <form class="form-inline my-2 my-lg-0" action="">
-                <i class="search-icon fas fa-search"></i>
-                <div class='search-field'>
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn my-2 my-sm-0" type="submit">Search</button>
-                </div>
-            </form>
+            <?php get_search_form(); ?>
           </div>
     </nav>
 </div>
