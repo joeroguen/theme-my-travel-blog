@@ -485,6 +485,8 @@ h2.follow-me {
 #posts-page .button-view-more-blogs {
   margin-top: 70px; }
 
+
+
 body.single .section-main .post {
     height: auto;
 }
@@ -519,4 +521,11 @@ body.single .post .tags a {
 }
 body.single .button-view-more-blogs a {
     margin-right: 10px;
+}
+
+
+
+body.page-template-template-about .container div,
+body.page-template-template-about img {
+    width: 100% !important;
 }

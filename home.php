@@ -10,6 +10,7 @@
 <?php endif; ?>
 
 
+
 <h2 class='offset-2'>blog</h2>
 <div id='posts-page'>
     <div class='row no-gutters'>
