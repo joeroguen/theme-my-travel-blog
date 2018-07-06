@@ -25,9 +25,10 @@
 
 <!-- sectionbanner -->
 <?php if ( is_front_page() ) : ?>
-    <div class='banner'>
+    <div class='banner' style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/nolan-marketti-93667-unsplash.jpg)'>
         <h1><?php bloginfo( 'name' ); ?></h1>
     </div>
+<?php elseif ( is_single() ) : ?>
 <?php elseif ( !is_home() ) : ?>
     <div class='banner'></div>
 <?php endif; ?>

@@ -65,7 +65,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
       border: 1px solid #148bb1; }
 
 .banner {
-  background-image: url("./images/nolan-marketti-93667-unsplash.jpg");
   background-attachment: fixed;
   background-position: top center;
   background-repeat: no-repeat;
@@ -485,3 +484,39 @@ h2.follow-me {
 
 #posts-page .button-view-more-blogs {
   margin-top: 70px; }
+
+body.single .section-main .post {
+    height: auto;
+}
+body.single .navbar-container .navbar {
+    margin-bottom: 30px;
+}
+body.single .section-main .date {
+    color: #000000;
+    font: normal bold normal 17px/1.5 'Rubik', Arial, sans-serif;
+    text-transform: lowercase;
+}
+body.single .section-main .trip-name {
+    color: #148bb1;
+    font: normal bold normal 17px/1.5 'Rubik', Arial, sans-serif;
+}
+body.single .section-main .title {
+    color: #148bb1;
+    font: italic normal normal 77px/1 'Rubik', Arial, sans-serif;
+}
+body.single .post .featured-image {
+    margin-bottom: 50px;
+    width: 100%;
+}
+body.single .post .content {
+    color: #333333;
+    font: normal normal normal 17px/1.5 'Rubik', Arial, sans-serif;
+    padding-right: 3%;
+}
+body.single .post .tags a {
+    color: #148bb1;
+    text-transform: lowercase;
+}
+body.single .button-view-more-blogs a {
+    margin-right: 10px;
+}
