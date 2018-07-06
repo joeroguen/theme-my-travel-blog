@@ -527,5 +527,6 @@ body.single .button-view-more-blogs a {
 
 body.page-template-template-about .container div,
 body.page-template-template-about img {
+    height: auto;
     width: 100% !important;
 }
