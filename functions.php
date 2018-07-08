@@ -69,9 +69,45 @@ function mtb_add_scripts_admin_pages() {
 
 
 
+//sectionhomebanner
+if ( ! function_exists( 'mtb_add_admin_submenu_home_banner' ) ) {
+    //add submenu to admin page under appearance
+    add_action( 'admin_menu', 'mtb_add_admin_submenu_home_banner' );
+    function mtb_add_admin_submenu_home_banner() {
+        add_submenu_page( 'themes.php', 'Home Page Banner', 'Home Banner', 'manage_options', 'mtb_subpage_home_banner', 'mtb_add_home_banner_options' );
+    }
+    //make submenu page layout
+    function mtb_add_home_banner_options() {
+        echo '<h1>Home Banner Image</h1>';
+        echo 'Upload an image to place on the home page of your blog';
+        echo '<hr />';
+        settings_errors();
+        echo '<form id="form-subpage-home-banner" action="options.php" method="post">';
+        settings_fields( 'settings_group_home_banner' ); //hidden fields, place before do_settings_sections
+        do_settings_sections( 'mtb_subpage_home_banner' );
+        submit_button( 'Save Changes', 'primary', 'submit', true );
+        echo '</form>';
+    }
+    add_action( 'admin_init', 'mtb_add_settings_home_banner' );
+    function mtb_add_settings_home_banner() {
+        //section main
+        add_settings_section( 'section_home_banner', '', 'mtb_add_section_upload_banner_image', 'mtb_subpage_home_banner' );
+        //fields main
+        register_setting( 'settings_group_home_banner', 'home_banner_image' );
+        add_settings_field( 'field_home_banner_image', 'Home Banner Image', 'mtb_add_field_home_banner_image', 'mtb_subpage_home_banner', 'section_home_banner' );
+    }
+    function mtb_add_section_upload_banner_image() { echo ''; }
+    function mtb_add_field_home_banner_image() {
+        $home_banner_image = esc_attr( get_option( 'home_banner_image' ) );
+        echo '<input type="button" value="Upload Image" id="button-upload-home-banner" class="button button-secondary" /><input type="hidden" name="home_banner_image" id="hidden-data-home-banner-url" value="' . $home_banner_image . '" /><br /><img id="hidden-data-home-banner-url" src="' . $home_banner_image . '" />';
+    }
+}
+
+
+
 //sectionprofilepic sectionprofilephoto
 if ( ! function_exists( 'mtb_add_admin_submenu_frontpage_sidebar' ) ) {
-    //add submenu to admin page under media
+    //add submenu to admin page under appearance
     add_action( 'admin_menu', 'mtb_add_admin_submenu_frontpage_sidebar' );
     function mtb_add_admin_submenu_frontpage_sidebar() {
         add_submenu_page( 'themes.php', 'Sidebar Options', 'Sidebar', 'manage_options', 'mtb_subpage_sidebar', 'mtb_add_sidebar_options' );

@@ -25,7 +25,7 @@
 
 <!-- sectionbanner -->
 <?php if ( is_front_page() ) : ?>
-    <div class='banner' style='background-image:url(<?php echo get_template_directory_uri(); ?>/images/nolan-marketti-93667-unsplash.jpg)'>
+    <div class='banner' style='background-image:url(<?php echo get_option( 'home_banner_image' ); ?>'>
         <h1><?php bloginfo( 'name' ); ?></h1>
     </div>
 <?php elseif ( is_search() ) : ?>
