@@ -50,7 +50,7 @@
         </div>
     <?php endif ?>
 </div>
-<small class='copyright'>@ copyright 2018</small>
+<small class='copyright'>&copy; copyright <?php echo date('Y'); ?></small>
 
 </body>
 </html>
