@@ -237,3 +237,66 @@ if ( ! function_exists( 'mtb_add_admin_submenu_frontpage_sidebar' ) ) {
         echo '<label for="fav_sight_seeing">Title</label> <input type="text" name="fav_sight_seeing" value="' . $fav_sight_seeing . '" /><br /><label for="fav_sight_seeing_post_url">Post Url</label> <input type="text" name="fav_sight_seeing_post_url" value="' . $fav_sight_seeing_post_url . '" />';
     }
 }
+
+
+
+if ( ! function_exists( 'mtb_add_admin_submenu_follow_me' ) ) {
+    add_action( 'admin_menu', 'mtb_add_admin_submenu_follow_me' );
+    function mtb_add_admin_submenu_follow_me() {
+        add_submenu_page( 'themes.php', 'Follow Me', 'Follow Me', 'manage_options', 'mtb_subpage_follow_me', 'mtb_add_options_follow_me' );
+    }
+    function mtb_add_options_follow_me() {
+        echo '<h1>Follow Me Settings</h1>';
+        echo 'Settings for Follow Me section in footer area of blog.';
+        echo '<br />';
+        settings_errors();
+        echo '<form id="form-subpage-follow-me" action="options.php" method="post">';
+        settings_fields( 'settings_group_follow_me' );
+        do_settings_sections( 'mtb_subpage_follow_me' );
+        submit_button( 'Save Changes', 'primary', 'submit', true );
+        echo '</form>';
+    }
+    add_action( 'admin_init', 'mtb_add_settings_follow_me' );
+    function mtb_add_settings_follow_me() {
+        add_settings_section( 'section_follow_me', '', 'mtb_add_section_follow_me_main', 'mtb_subpage_follow_me' );
+        register_setting( 'settings_group_follow_me', 'follow_me_facebook' );
+        add_settings_field( 'field_follow_me_facebook', 'Facebook', 'mtb_add_field_follow_me_facebook', 'mtb_subpage_follow_me', 'section_follow_me' );
+        register_setting( 'settings_group_follow_me', 'follow_me_twitter' );
+        add_settings_field( 'field_follow_me_twitter', 'Twitter', 'mtb_add_field_follow_me_twitter', 'mtb_subpage_follow_me', 'section_follow_me' );
+        register_setting( 'settings_group_follow_me', 'follow_me_instagram' );
+        add_settings_field( 'field_follow_me_instagram', 'Instagram', 'mtb_add_field_follow_me_instagram', 'mtb_subpage_follow_me', 'section_follow_me' );
+        register_setting( 'settings_group_follow_me', 'follow_me_youtube' );
+        add_settings_field( 'field_follow_me_youtube', 'Youtube', 'mtb_add_field_follow_me_youtube', 'mtb_subpage_follow_me', 'section_follow_me' );
+        register_setting( 'settings_group_follow_me', 'follow_me_pinterest' );
+        add_settings_field( 'field_follow_me_pinterest', 'Pinterest', 'mtb_add_field_follow_me_pinterest', 'mtb_subpage_follow_me', 'section_follow_me' );
+        register_setting( 'settings_group_follow_me', 'follow_me_vine' );
+        add_settings_field( 'field_follow_me_vine', 'Vine', 'mtb_add_field_follow_me_vine', 'mtb_subpage_follow_me', 'section_follow_me' );
+    }
+    function mtb_add_section_follow_me_main() {
+        echo '<p class="description">Please include the http or https at the beginning of the url. (Example: https://facebook.com/yourusername)</p>';
+    }
+    function mtb_add_field_follow_me_facebook() {
+        $follow_me_facebook = esc_attr( get_option( 'follow_me_facebook' ) );
+        echo '<input type="text" name="follow_me_facebook" value="' . $follow_me_facebook . '" />';
+    }
+    function mtb_add_field_follow_me_twitter() {
+        $follow_me_twitter = esc_attr( get_option( 'follow_me_twitter' ) );
+        echo '<input type="text" name="follow_me_twitter" value="' . $follow_me_twitter . '" />';
+    }
+    function mtb_add_field_follow_me_instagram() {
+        $follow_me_instagram = esc_attr( get_option( 'follow_me_instagram' ) );
+        echo '<input type="text" name="follow_me_instagram" value="' . $follow_me_instagram . '" />';
+    }
+    function mtb_add_field_follow_me_youtube() {
+        $follow_me_youtube = esc_attr( get_option( 'follow_me_youtube' ) );
+        echo '<input type="text" name="follow_me_youtube" value="' . $follow_me_youtube . '" />';
+    }
+    function mtb_add_field_follow_me_pinterest() {
+        $follow_me_pinterest = esc_attr( get_option( 'follow_me_pinterest' ) );
+        echo '<input type="text" name="follow_me_pinterest" value="' . $follow_me_pinterest . '" />';
+    }
+    function mtb_add_field_follow_me_vine() {
+        $follow_me_vine = esc_attr( get_option( 'follow_me_vine' ) );
+        echo '<input type="text" name="follow_me_vine" value="' . $follow_me_vine . '" />';
+    }
+}
