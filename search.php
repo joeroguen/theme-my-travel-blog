@@ -11,7 +11,9 @@
                 <h5><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h5>
                 <?php the_excerpt(); ?>
             <?php endwhile; ?>
-        <?php endif; ?>
+        <?php else : ?>
+            <h5>Sorry, there is nothing found for that keyword. Please try a different search.</h5>
+        <?php endif ?>
     </div>
 </div>
 
