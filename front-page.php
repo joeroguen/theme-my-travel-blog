@@ -89,14 +89,4 @@
 
 
 
-
-
-
-<h2 class='offset-2'>my travels</h2>
-<div class='map section'>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7961367.508651016!2d96.99302230057528!3d13.011043023699465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d8df747424db1%3A0x9ed72c880757e802!2sThailand!5e0!3m2!1sen!2sus!4v1529628778627" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
-
-
-
 <?php get_footer(); ?>
