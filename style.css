@@ -494,6 +494,11 @@ h2.follow-me {
 
 
 
+@media (max-width: 767px) {
+    body.single {
+        margin: 0 3% 0 3%;
+    }
+}
 body.single .section-main .post {
     height: auto;
 }
@@ -549,3 +554,37 @@ body.search h5 a {
     color: #148bb1;
     font: italic normal normal 30px/1 'Rubik', Arial, sans-serif;
 }
+
+
+
+.mtb-comments {
+    font: normal normal normal 17px/1.5 'Rubik', Arial, sans-serif;
+}
+.mtb-comments li {
+    list-style-type: none;
+}
+.mtb-comments a {
+    color: #148bb1;
+}
+.mtb-comments .avatar {
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+}
+.mtb-comments .comment-form-comment label {
+    display: block;
+}
+.mtb-comments .comment-form-comment textarea {
+    width: 100%;
+}
+.mtb-comments .comment-form .submit {
+    background: none transparent;
+    border-color: #148bb1;
+    border-radius: 5px;
+    color: #148bb1;
+    font: normal normal normal 17px/1 'Rubik', Arial, sans-serif;
+    height: 30px;
+    }
+    .mtb-comments .comment-form .submit:hover {
+        cursor: pointer;
+    }

@@ -25,10 +25,18 @@
                     <?php the_tags( $before = false ); ?>
                 </div>
             </div>
+            <div class='button-view-more-blogs offset-sm-2'>
+                <?php previous_post_link(); next_post_link(); ?>
+            </div>
+            <?php
+                // If comments are open or we have at least one comment, load up the comment template.
+                if ( comments_open() || get_comments_number() ) :
+                    echo '<div class="offset-md-2">';
+                        comments_template();
+                    echo '</div>';
+                endif;
+            ?>
         <?php endwhile; ?>
-        <div class='button-view-more-blogs offset-sm-2'>
-            <?php previous_post_link(); next_post_link(); ?>
-        </div>
     </div>
 <?php endif; ?>
     <!-- sectionsidebar -->
