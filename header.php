@@ -28,16 +28,12 @@
     <div class='banner' style='background-image:url(<?php echo get_option( 'home_banner_image' ); ?>'>
         <h1><?php bloginfo( 'name' ); ?></h1>
     </div>
-<?php elseif ( is_search() ) : ?>
-<?php elseif ( is_single() ) : ?>
 <?php elseif ( is_page_template() ) : ?>
     <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
             <?php if ( has_post_thumbnail() ) : ?>
                 <?php $about_page_banner_image = wp_get_attachment_url( get_post_thumbnail_id() ); ?>
-                <div class='banner' style='background-image:url(<?php echo $about_page_banner_image; ?>); height:200px;'>
-                    <h1><?php the_title(); ?></h1>
-                </div>
+                <div class='banner' style='background-image:url(<?php echo $about_page_banner_image; ?>); height:200px;'></div>
             <?php endif; ?>
         <?php endwhile; ?>
     <?php endif; ?>
@@ -46,14 +42,10 @@
         <?php while ( have_posts() ) : the_post(); ?>
             <?php if ( has_post_thumbnail() ) : ?>
                 <?php $about_page_banner_image = wp_get_attachment_url( get_post_thumbnail_id() ); ?>
-                <div class='banner' style='background-image:url(<?php echo $about_page_banner_image; ?>); height:200px;'>
-                    <h1><?php the_title(); ?></h1>
-                </div>
+                <div class='banner' style='background-image:url(<?php echo $about_page_banner_image; ?>); height:200px;'></div>
             <?php endif; ?>
         <?php endwhile; ?>
     <?php endif; ?>
-<?php elseif ( !is_home() ) : ?>
-    <div class='banner'></div>
 <?php endif; ?>
 
 
