@@ -23,7 +23,7 @@ if ( ! function_exists( 'mtb_after_setup_theme' ) ) {
         //sectionbackground
         add_theme_support( 'custom-background' );
         //sectionnav sectionmenu
-        add_theme_support( 'menus' );
+        register_nav_menus();
     }
 }
 
