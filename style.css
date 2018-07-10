@@ -689,8 +689,6 @@ body.search h5 a {
 }
 .mtb-comments .avatar {
     border-radius: 50px;
-    height: 50px;
-    width: 50px;
 }
 .mtb-comments .comment-form-comment label {
     display: block;

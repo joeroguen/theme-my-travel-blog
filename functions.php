@@ -61,6 +61,10 @@ if ( ! function_exists( 'mtb_add_styles_and_scripts' ) ) {
         wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/scripts/bootstrap-4-1-1/bootstrap.min.js' );
         //main javascript file
         wp_enqueue_script( 'main-javascript-file', get_template_directory_uri() . '/scripts/main.js' );
+        //comment-reply
+        if ( is_singular() ) {
+            wp_enqueue_script( 'comment-reply' );
+        }
     }
 }
 
