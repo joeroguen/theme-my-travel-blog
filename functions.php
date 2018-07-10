@@ -29,6 +29,13 @@ if ( ! function_exists( 'mtb_after_setup_theme' ) ) {
 
 
 
+//sectioncontentwidth
+if ( ! isset( $content_width ) ) {
+	$content_width = 600;
+}
+
+
+
 //sectionbootstrapmenu sectionbootstrapnav register bootsrap navigation walker
 require_once get_template_directory() . '/wp-bootstrap-navwalker-4-1-0.php';
 register_nav_menus( array(
