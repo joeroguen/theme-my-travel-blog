@@ -636,6 +636,11 @@ body.single .section-main .title {
     color: #148bb1;
     font: italic normal normal 77px/1 'Rubik', Arial, sans-serif;
 }
+@media (max-width: 767px) {
+    body.single .section-main .title {
+        font-size: 30px;
+    }
+}
 body.single .post .featured-image {
     margin-bottom: 50px;
     width: 100%;
