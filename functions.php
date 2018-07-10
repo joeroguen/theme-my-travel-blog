@@ -34,6 +34,13 @@ if ( ! function_exists( 'mtb_after_setup_theme' ) ) {
 
 
 
+//sectionbootstrapmenu sectionbootstrapnav register bootsrap navigation walker
+require_once get_template_directory() . '/wp-bootstrap-navwalker-4-1-0.php';
+register_nav_menus( array(
+	'primary' => __( 'Primary Menu' ),
+) );
+
+
 //sectionenqueeue sectionstyles sectionscripts
 if ( ! function_exists( 'mtb_add_styles_and_scripts' ) ) {
     add_action( 'wp_enqueue_scripts', 'mtb_add_styles_and_scripts' );
