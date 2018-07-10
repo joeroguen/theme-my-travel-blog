@@ -108,7 +108,13 @@ a img.aligncenter {
 	z-index: 100000;
 	/* Above WP toolbar. */
 }
-
+.gallery-item {
+    overflow-x: hidden;
+}
+.gallery-caption {
+    color: #737373;
+    font: normal normal normal 13px/1 'Rubik', Arial, sans-serif;
+}
 
 
 .navbar-container {
