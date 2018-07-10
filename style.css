@@ -115,6 +115,9 @@ a img.aligncenter {
     color: #737373;
     font: normal normal normal 13px/1 'Rubik', Arial, sans-serif;
 }
+.bypostauthor {
+    background-color: #bddce6;
+}
 
 
 .navbar-container {
@@ -673,6 +676,9 @@ body.search h5 a {
 
 .mtb-comments {
     font: normal normal normal 17px/1.5 'Rubik', Arial, sans-serif;
+}
+.mtb-comments .comment {
+    padding: 3% 3% 3% 3%;
 }
 .mtb-comments li {
     list-style-type: none;
