@@ -708,3 +708,6 @@ body.search h5 a {
     .mtb-comments .comment-form .submit:hover {
         cursor: pointer;
     }
+.mtb-comments .comment-reply-title {
+    margin-top: 10px;
+}
