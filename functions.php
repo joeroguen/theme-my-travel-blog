@@ -10,11 +10,6 @@
 
 
 
-//hide admin dashboard toolbar at top
-show_admin_bar( false );
-
-
-
 //after theme setup
 if ( ! function_exists( 'mtb_after_setup_theme' ) ) {
     add_action( 'after_setup_theme', 'mtb_after_setup_theme' );
