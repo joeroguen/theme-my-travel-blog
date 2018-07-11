@@ -89,7 +89,8 @@ if ( ! function_exists( 'mtb_add_admin_submenu_home_banner' ) ) {
     //add submenu to admin page under appearance
     add_action( 'admin_menu', 'mtb_add_admin_submenu_home_banner' );
     function mtb_add_admin_submenu_home_banner() {
-        add_submenu_page( 'themes.php', 'Home Page Banner', 'Home Banner', 'manage_options', 'mtb_subpage_home_banner', 'mtb_add_home_banner_options' );
+        add_theme_page( 'themes.php', '*Home Banner', 'manage_options', 'mtb_subpage_home_banner', 'mtb_add_home_banner_options' );
+        //add_submenu_page( 'themes.php', 'Home Page Banner', 'Home Banner', 'manage_options', 'mtb_subpage_home_banner', 'mtb_add_home_banner_options' );
     }
     //make submenu page layout
     function mtb_add_home_banner_options() {
@@ -125,7 +126,8 @@ if ( ! function_exists( 'mtb_add_admin_submenu_frontpage_sidebar' ) ) {
     //add submenu to admin page under appearance
     add_action( 'admin_menu', 'mtb_add_admin_submenu_frontpage_sidebar' );
     function mtb_add_admin_submenu_frontpage_sidebar() {
-        add_submenu_page( 'themes.php', 'Sidebar Options', 'Sidebar', 'manage_options', 'mtb_subpage_sidebar', 'mtb_add_sidebar_options' );
+        add_theme_page( 'themes.php', '*Sidebar', 'manage_options', 'mtb_subpage_sidebar', 'mtb_add_sidebar_options' );
+        //add_submenu_page( 'themes.php', 'Sidebar Options', 'Sidebar', 'manage_options', 'mtb_subpage_sidebar', 'mtb_add_sidebar_options' );
     }
     //make submenu page layout
     function mtb_add_sidebar_options() {
@@ -258,7 +260,8 @@ if ( ! function_exists( 'mtb_add_admin_submenu_frontpage_sidebar' ) ) {
 if ( ! function_exists( 'mtb_add_admin_submenu_follow_me' ) ) {
     add_action( 'admin_menu', 'mtb_add_admin_submenu_follow_me' );
     function mtb_add_admin_submenu_follow_me() {
-        add_submenu_page( 'themes.php', 'Follow Me', 'Follow Me', 'manage_options', 'mtb_subpage_follow_me', 'mtb_add_options_follow_me' );
+        add_theme_page( 'themes.php', '*Follow Me', 'manage_options', 'mtb_subpage_follow_me', 'mtb_add_options_follow_me' );
+        //add_submenu_page( 'themes.php', 'Follow Me', 'Follow Me', 'manage_options', 'mtb_subpage_follow_me', 'mtb_add_options_follow_me' );
     }
     function mtb_add_options_follow_me() {
         echo '<h1>Follow Me Settings</h1>';
