@@ -141,7 +141,11 @@ a img.aligncenter {
     }
     .navbar-container .navbar .navbar-nav .dropdown-menu li {
         margin-right: 0 !important;
-    }
+        }
+        .dropdown-item.active,
+        .dropdown-item:active {
+            background-color: transparent;
+        }
     @media (max-width: 991px) {
         .navbar-container .navbar .navbar-nav li {
           margin: 10px 25px 10px 0;
