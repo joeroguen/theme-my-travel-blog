@@ -24,6 +24,9 @@
                 <div class='tags offset-md-2'>
                     <?php the_tags( $before = false ); ?>
                 </div>
+                <div class="mtb-post-pagination offset-md-2">
+                    <?php wp_link_pages(); ?>
+                </div>
             </div>
             <div class='button-view-more-blogs offset-sm-2'>
                 <?php previous_post_link(); next_post_link(); ?>
