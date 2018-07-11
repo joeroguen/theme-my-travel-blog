@@ -52,5 +52,7 @@
 </div>
 <small class='copyright'>&copy; copyright <?php echo date('Y'); ?></small>
 
+
+<?php wp_footer(); ?>
 </body>
 </html>
