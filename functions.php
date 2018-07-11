@@ -25,7 +25,7 @@ if ( ! function_exists( 'mtb_after_setup_theme' ) ) {
         //sectionnav sectionmenu
         register_nav_menus();
         //sectionfeed
-        add_theme_support( 'automatic_feed_links' );
+        add_theme_support( 'automatic-feed-links' );
     }
 }
 
