@@ -195,6 +195,7 @@ a img.aligncenter {
 
 .banner {
   background-attachment: fixed;
+  background-color: #148bb1;
   background-position: top center;
   background-repeat: no-repeat;
   -moz-background-size: cover;
