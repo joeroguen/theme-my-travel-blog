@@ -13,9 +13,8 @@
                 <h2 class='title offset-md-2'><?php the_title(); ?></h2>
                 <?php
                     if ( has_post_thumbnail() ) {
-                        $post_featured_image;
-                        $post_featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-                        echo '<img class="featured-image" src="'.$post_featured_image[0].'" />';
+                        $post_thumbnail_args = array( 'class' => 'featured-image' );
+                        the_post_thumbnail( '', $post_thumbnail_args );
                     }
                 ?>
                 <div class="content offset-md-2">

@@ -647,6 +647,7 @@ body.single .section-main .title {
     }
 }
 body.single .post .featured-image {
+    height: auto;
     margin-bottom: 50px;
     width: 100%;
 }
