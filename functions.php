@@ -26,6 +26,8 @@ if ( ! function_exists( 'mtb_after_setup_theme' ) ) {
         add_theme_support( 'custom-header' );
         //sectionnav sectionmenu
         register_nav_menus();
+        //styles for TinyMCE visual editor
+        add_editor_style();
         //sectionfeed
         add_theme_support( 'automatic-feed-links' );
     }

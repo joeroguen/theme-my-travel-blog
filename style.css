@@ -244,7 +244,7 @@ a img.aligncenter {
 
 h2 {
   color: #000000;
-  font: normal normal normal 30px/1 'Homemade Apple', serif;
+  font: normal normal normal 30px/1.5 'Homemade Apple', serif;
   margin-bottom: 40px; }
 
 .section-main .post {
@@ -656,6 +656,7 @@ body.single .post .content {
     font: normal normal normal 17px/1.5 'Rubik', Arial, sans-serif;
     overflow-x: hidden;
     padding-right: 3%;
+    padding-top: 15px;
 }
 body.single .content img.alignnone {
     height: auto !important;

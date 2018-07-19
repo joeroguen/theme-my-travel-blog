@@ -1,0 +1,289 @@
+#tinymce .alignnone {
+    margin: 5px 20px 20px 0;
+}
+#tinymce .aligncenter,
+#tinymce div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+#tinymce .alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+#tinymce .alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+#tinymce a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+#tinymce a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+#tinymce a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+#tinymce a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#tinymce .wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+#tinymce .wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+#tinymce .wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+#tinymce .wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+#tinymce .wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+#tinymce .wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+/* Text meant only for screen readers. */
+#tinymce .screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+#tinymce .screen-reader-text:focus {
+	background-color: #eee;
+	clip: auto !important;
+	clip-path: none;
+	color: #444;
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+#tinymce .gallery-item {
+    overflow-x: hidden;
+}
+#tinymce .gallery-caption {
+    color: #737373;
+    font: normal normal normal 13px/1 'Rubik', Arial, sans-serif;
+}
+#tinymce .bypostauthor {
+    background-color: #bddce6;
+}
+
+
+
+#tinymce h2 {
+  color: #000000;
+  font: normal normal normal 30px/1 'Homemade Apple', serif;
+  margin-bottom: 40px; }
+
+#tinymce .section-main .post {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+    -o-background-size: cover;
+       background-size: cover;
+  height: 400px;
+  margin-bottom: 100px;
+  -webkit-transition: 1s background-position ease;
+  -o-transition: 1s background-position ease;
+  -moz-transition: 1s background-position ease;
+  transition: 1s background-position ease; }
+  #tinymce .section-main .post:hover {
+    background-position: center bottom; }
+  #tinymce .section-main .post .info {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0 5% 50px 5%;
+    -webkit-transition: 1s background-color ease;
+    -o-transition: 1s background-color ease;
+    -moz-transition: 1s background-color ease;
+    transition: 1s background-color ease; }
+    #tinymce .section-main .post .info:hover {
+      background-color: rgba(255, 255, 255, 0.9); }
+    #tinymce .section-main .post .info .date {
+      color: #000000;
+      font: normal bold normal 17px/1.5 'Rubik', Arial, sans-serif;
+      position: absolute;
+      text-transform: lowercase;
+      top: -25px;
+    }
+    #tinymce .section-main .post .info .trip-name {
+      color: #148bb1;
+      font: normal bold normal 17px/1.5 'Rubik', Arial, sans-serif; }
+    #tinymce .section-main .post .trip-name ul {
+        list-style-type: none;
+        padding-left: 0;
+        }
+        #tinymce .section-main .post .trip-name a {
+            color: #148bb1;
+        }
+    #tinymce .section-main .post .info .title {
+      margin-bottom: 0;
+    }
+    #tinymce .section-main .post .info .title a {
+      color: #148bb1;
+      font: italic normal normal 47px/1 'Rubik', Arial, sans-serif;
+      }
+    #tinymce .section-main .post .info p {
+      color: #333333;
+      font: normal normal normal 15px/1.5 'Rubik', Arial, sans-serif;
+      max-height: 150px;
+      overflow: hidden;
+    }
+
+#tinymce .image-full-width img {
+  margin: 5% 0;
+  width: 100%; }
+
+#tinymce #posts-page .post {
+  background-image: url("./images/nolan-marketti-93667-unsplash.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+    -o-background-size: cover;
+       background-size: cover;
+  max-height: 500px;
+  outline: 1px solid #ffffff;
+  overflow-y: hidden;
+  padding-left: 0;
+  -webkit-transition: 1s background-position ease;
+  -o-transition: 1s background-position ease;
+  -moz-transition: 1s background-position ease;
+  transition: 1s background-position ease; }
+  #tinymce #posts-page .post:hover {
+    background-position: center bottom; }
+  #tinymce #posts-page .post .info {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-height: 400px;
+    max-width: 75%;
+    padding: 0 5% 50px 5%;
+    -webkit-transition: 1s background-color ease;
+    -o-transition: 1s background-color ease;
+    -moz-transition: 1s background-color ease;
+    transition: 1s background-color ease; }
+    #tinymce #posts-page .post .info:hover {
+      background-color: rgba(255, 255, 255, 0.9); }
+    #tinymce #posts-page .post .info .date {
+      color: #000000;
+      display: inline-block;
+      font: normal bold normal 17px/1 'Rubik', Arial, sans-serif;
+      margin-top: 15px; }
+    #tinymce #posts-page .post .info .trip-name {
+      color: #148bb1;
+      font: normal bold normal 17px/1 'Rubik', Arial, sans-serif; }
+    #tinymce #posts-page .post .info .title {
+      color: #148bb1;
+      font: italic normal normal 47px/1 'Rubik', Arial, sans-serif;
+      margin-bottom: 5px; }
+    #tinymce #posts-page .post .info .excerpt {
+      color: #333333;
+      font: normal normal normal 17px/1.5 'Rubik', Arial, sans-serif; }
+    #tinymce #posts-page .post .info .read-more {
+      color: #148bb1;
+      border: 1px solid #148bb1;
+      -webkit-border-radius: 10px;
+         -moz-border-radius: 10px;
+              border-radius: 10px;
+      display: inline-block;
+      font: normal normal normal 17px/1 'Rubik', Arial, sans-serif;
+      margin-bottom: 25px;
+      padding: 3px 10px; }
+      #tinymce #posts-page .post .info .read-more .fas {
+        opacity: 0;
+        text-indent: -50%;
+        -webkit-transition: 0.5s all ease;
+        -o-transition: 0.5s all ease;
+        -moz-transition: 0.5s all ease;
+        transition: 0.5s all ease; }
+      #tinymce #posts-page .post .info .read-more:hover {
+        background-color: #ffffff;
+        text-decoration: none; }
+      #tinymce #posts-page .post .info .read-more:hover .fas {
+        opacity: 1;
+        text-indent: 0; }
+    #tinymce #posts-page .post .info .tags {
+      font: normal normal normal 13px/1 'Rubik', Arial, sans-serif;
+      list-style-type: none;
+      padding-left: 0; }
+      #tinymce #posts-page .post .info .tags li {
+        display: inline-block; }
+        #tinymce #posts-page .post .info .tags li a {
+          color: #148bb1; }
+
+#tinymce #posts-page .button-view-more-blogs {
+  margin-top: 70px; }
+
+
+
+#tinymce .section-main .post {
+    height: auto;
+}
+#tinymce .navbar-container .navbar {
+    margin-bottom: 30px;
+}
+#tinymce .section-main .date {
+    color: #000000;
+    font: normal bold normal 17px/1.5 'Rubik', Arial, sans-serif;
+    text-transform: lowercase;
+}
+#tinymce .section-main .trip-name {
+    color: #148bb1;
+    font: normal bold normal 17px/1.5 'Rubik', Arial, sans-serif;
+}
+#tinymce .section-main .title {
+    color: #148bb1;
+    font: italic normal normal 77px/1 'Rubik', Arial, sans-serif;
+}
+#tinymce .post .featured-image {
+    height: auto;
+    margin-bottom: 50px;
+    width: 100%;
+}
+#tinymce p {
+    color: #333333;
+    font: normal normal normal 17px/1.5 'Rubik', Arial, sans-serif;
+    overflow-x: hidden;
+    padding-right: 3%;
+}
+#tinymce .content img.alignnone {
+    height: auto !important;
+    width: auto !important;
+}
+#tinymce .post .tags a {
+    color: #148bb1;
+    text-transform: lowercase;
+}
+#tinymce .button-view-more-blogs a {
+    margin-right: 10px;
+}
