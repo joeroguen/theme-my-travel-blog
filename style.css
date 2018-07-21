@@ -483,7 +483,7 @@ h2 {
   color: #afafaf;
   display: block;
   font: normal normal normal 13px/1.5 'Rubik', Arial, sans-serif;
-  margin-bottom: 10px;
+  margin: 100px 0 10px 0;
   text-align: center;
   width: 100%; }
 
@@ -722,3 +722,37 @@ body.search h5 a {
 .mtb-comments .comment-reply-title {
     margin-top: 10px;
 }
+
+
+
+/* sectionwidgets sectionwidget */
+.widget-area .widgettitle {
+    color: #333333;
+    font: normal bold normal 30px/1 'Rubik', Arial, sans-serif;
+    }
+    @media (max-width: 767px) {
+        .widget-area .widgettitle {
+            margin: 50px 0 20px 0;
+        }
+    }
+    .widget-area .widget-item ul {
+        list-style-type: none;
+        padding-left: 0;
+        }
+        .widget-area .widget-item ul li {
+            font-size: 13px;
+        }
+        @media (max-width: 767px) {
+            .widget-area .widget-item ul li {
+                font-size: 17px;
+            }
+        }
+    .widget-area i.search-icon {
+        display: none;
+    }
+    .widget-area .mejs-audio {
+        width: 100% !important;
+    }
+    .widget-area a {
+        color: #148bb1;
+    }

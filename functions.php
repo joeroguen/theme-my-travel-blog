@@ -285,3 +285,16 @@ if ( ! function_exists( 'mtb_add_admin_submenu_follow_me' ) ) {
         echo '<input type="text" name="follow_me_vine" value="' . $follow_me_vine . '" />';
     }
 }
+
+
+
+//sectionwidgets sectionwidget
+function mtb_add_custom_widgets() {
+    register_sidebar( array(
+        'name' => 'Footer Area',
+        'id' => 'widget1',
+        'before_widget' => '<div class="widget-item col-md">',
+        'after_widget' => '</div>'
+    ));
+}
+add_action( 'widgets_init', 'mtb_add_custom_widgets' );

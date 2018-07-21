@@ -50,6 +50,11 @@
         </div>
     <?php endif ?>
 </div>
+<?php
+    if ( is_active_sidebar( 'widget1' ) ) {
+        get_sidebar();
+    }
+?>
 <small class='copyright'>&copy; copyright <?php echo date('Y'); ?></small>
 
 
