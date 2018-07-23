@@ -756,3 +756,13 @@ body.search h5 a {
     .widget-area a {
         color: #148bb1;
     }
+
+
+
+/* section404 */
+body.error404 .content p {
+    font: normal normal normal 17px/1.5 'Rubik', Arial, sans-serif;
+    }
+    body.error404 .content .notice {
+        font-size: 47px;
+    }
